@@ -42,14 +42,14 @@ def rand_seq(length, number):
     Generate random list of A, T, C, G
     """
 
-    aa_list = ['A', 'T', 'C', 'G']
+    nucleotide_list = ['A', 'T', 'C', 'G']
     cpt_number = 0
     rand_list = []
     while number > cpt_number:
         cpt_length = 0
         random_sequence = ""
         while length > cpt_length:
-            random_char = random.choice(aa_list)
+            random_char = random.choice(nucleotide_list)
             random_sequence += random_char
             cpt_length += 1
         rand_list.append(random_sequence)
