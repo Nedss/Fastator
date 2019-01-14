@@ -2,7 +2,7 @@
 Generate your own random fasta for test !
 **Version 1.0.0** (last update : 14/01/19)
 
-## Why am I needed this sript ? 
+## Why am I needed this script ? 
 
 If you don't want to search by yourself your datas on famous databasse and only want to have some nucleotides to do your test.     
 During my Master's degree, I developped several parsing script for DNA. Each time I need a sequence to test, but an internet connection is not always available. **That's why Fastator exists !**
