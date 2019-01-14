@@ -20,10 +20,10 @@ python3 fastator.py
 
 ### Options 
 
-**-l | --length** : Set length of your sequence (should be an *integer*)
-**-n | --number** : Set number of sequences in generated fasta file (should be an *integer*)
-**-c | --character** : Set characters by line (insert *'\n'* after, should be an *integer*)
-**-o | --output** : Set output's path (you should create *target directory before*)
+- **-l | --length** : Set length of your sequence (should be an *integer*)
+- **-n | --number** : Set number of sequences in generated fasta file (should be an *integer*)
+- **-c | --character** : Set characters by line (insert *'\n'* after, should be an *integer*)
+- **-o | --output** : Set output's path (you should create *target directory before*)
 
 **Example :** 
 
