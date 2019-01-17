@@ -54,7 +54,6 @@ def rand_seq(length, number):
             cpt_length += 1
         rand_list.append(random_sequence)
         cpt_number += 1
-    print(rand_list)
     return rand_list
 
 def write_fasta(rand_list, character, output):
