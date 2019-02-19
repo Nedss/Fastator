@@ -93,5 +93,3 @@ OUTPUT = ARGS.output
  
 RAND_LIST = rand_seq(LENGTH, NUMBER)
 write_fasta(RAND_LIST, CHARACTER, OUTPUT)
-  
-
