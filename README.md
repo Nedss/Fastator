@@ -1,6 +1,6 @@
 # Fastator
 Generate your own random fasta for test !
-**Version 1.1.0** (last update : 18/03/19)
+**Version 1.1.0** (last update : 28/03/19)
 
 ## Why am I needed this script ? 
 
