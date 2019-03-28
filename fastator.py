@@ -10,13 +10,11 @@ Version 1.0.0
 # IMPORT
 #######################################
 
-import os
-import sys
 import random
 import argparse
 
 #######################################
-# PARSER 
+# PARSER
 #######################################
 
 PARSER = argparse.ArgumentParser()
@@ -26,7 +24,7 @@ PARSER.add_argument("-n", "--number", dest="number", default=1,
                     help="Set number of sequences in file (INTEGER)", type=int)
 PARSER.add_argument("-c", "--character", dest="character", default=60,
                     help="Set character by lines (INTEGER)", type=int)
-PARSER.add_argument("-o", "--ouput", dest="output", default="", 
+PARSER.add_argument("-o", "--ouput", dest="output", default="",
                     help="Ouput path")
 ARGS = PARSER.parse_args()
 
@@ -34,8 +32,9 @@ ARGS = PARSER.parse_args()
 # FUNCTIONS
 #######################################
 
+
 def rand_seq(length, number):
-   
+
     """
     INPUT : length of the sequence (parser)
     OUTPUT : list of character
@@ -56,15 +55,16 @@ def rand_seq(length, number):
         cpt_number += 1
     return rand_list
 
+
 def write_fasta(rand_list, character, output):
 
     """
-    INPUT : rand list from previous function 
+    INPUT : rand list from previous function
             number of character by lines
-    OUTPUT : fasta file 
-    Generate fasta file 
+    OUTPUT : fasta file
+    Generate fasta file
     """
-    
+
     cpt_number = 1
     with open(output + "random.fasta", 'w+') as random_fasta:
         for sequence in rand_list:
@@ -73,23 +73,29 @@ def write_fasta(rand_list, character, output):
             for nucl in sequence:
                 cpt_char += 1
                 if cpt_char == character:
-                    random_fasta.write(nucl +'\n')
+                    random_fasta.write(nucl + '\n')
                     cpt_char = 0
                 else:
                     random_fasta.write(nucl)
             cpt_number += 1
             random_fasta.write('\n')
-    return 
 
 
 #######################################
-# MAIN 
+# MAIN
 #######################################
 
-LENGTH = ARGS.length
-NUMBER = ARGS.number
-CHARACTER = ARGS.character
-OUTPUT = ARGS.output
- 
-RAND_LIST = rand_seq(LENGTH, NUMBER)
-write_fasta(RAND_LIST, CHARACTER, OUTPUT)
+
+def main():
+
+    """
+    Classical main function
+    """
+
+    length = ARGS.length
+    number = ARGS.number
+    character = ARGS.character
+    output = ARGS.output
+
+    rand_list = rand_seq(length, number)
+    write_fasta(rand_list, character, output)
