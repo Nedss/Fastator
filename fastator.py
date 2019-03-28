@@ -99,3 +99,7 @@ def main():
 
     rand_list = rand_seq(length, number)
     write_fasta(rand_list, character, output)
+
+
+if __name__ == "__main__":
+    main()
